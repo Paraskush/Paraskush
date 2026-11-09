@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "35703306256",
+    "project_id": "paras-education-point",
+    "storage_bucket": "paras-education-point.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35703306256:android:a4bf1d8c9744694c32b295",
+        "android_client_info": {
+          "package_name": "com.paras.education.point"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBFqEl3UUDV1ejWDyFVBs051SW_9LpHP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
