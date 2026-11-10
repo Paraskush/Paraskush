@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123f9b">
+<title>Paras Education Point</title>
+<style>
+:root{--blue:#123f9b;--cyan:#16a6d2;--yellow:#ffdc26;--red:#e91e3a;--bg:#f4f8ff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;background:var(--bg);color:#12264a}
+header{background:linear-gradient(135deg,var(--blue),#087fb4);color:white;padding:20px 16px 24px;border-radius:0 0 24px 24px}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:58px;height:58px;border-radius:16px;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:26px;font-weight:900;border:3px solid var(--yellow)}
+h1{font-size:21px;margin:0}header p{margin:5px 0 0;font-size:13px;color:#e9f5ff}
+main{padding:16px;max-width:760px;margin:auto}.welcome{background:white;border-radius:18px;padding:16px;box-shadow:0 5px 18px #16376d12;margin-top:-8px}
+h2{font-size:17px;margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+.tile{background:white;border:1px solid #e0eaff;border-radius:15px;padding:14px 12px;min-height:92px;text-align:left;color:#14356d;font-size:14px;font-weight:700;box-shadow:0 3px 10px #173b7410}
+.tile span{display:block;font-size:24px;margin-bottom:8px}.section{background:#fff;border-radius:16px;padding:16px;margin:14px 0;box-shadow:0 3px 12px #173b740c}
+.course{padding:12px 0;border-bottom:1px solid #edf1f8}.course:last-child{border:0}.price{float:right;color:#c51e36;font-weight:800}
+button,.btn{border:0;border-radius:11px;background:var(--blue);color:#fff;padding:11px 14px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+button.secondary{background:#e8f1ff;color:var(--blue)}input,select,textarea{width:100%;padding:12px;border:1px solid #cdd9ec;border-radius:10px;margin:6px 0 12px;font:inherit}
+label{font-size:13px;font-weight:700}small,.muted{color:#60708b;font-size:12px}.hidden{display:none}.notice{background:#fff8cb;border:1px solid #ffe777;padding:12px;border-radius:12px;font-size:13px}
+footer{text-align:center;padding:24px 12px;color:#63738d;font-size:12px}
+nav{display:flex;gap:8px;overflow:auto;margin:12px 0}nav button{white-space:nowrap}
+#cameraPreview{width:100%;border-radius:12px;background:#111;max-height:320px}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand"><div class="logo">P✦</div><div><h1>PARAS EDUCATION POINT</h1><p>सही दिशा + नियमित अभ्यास = सफलता</p></div></div>
+</header>
+<main>
+ <div class="welcome">
+  <h2>नमस्ते विद्यार्थी! 👋</h2>
+  <p style="margin:0">नोट्स, वीडियो क्लास, टाइम टेबल, टेस्ट और फीस की जानकारी एक ही जगह।</p>
+ </div>
+ <nav>
+  <button onclick="showPage('home')">होम</button>
+  <button class="secondary" onclick="showPage('register')">विद्यार्थी रजिस्ट्रेशन</button>
+  <button class="secondary" onclick="showPage('admin')">एडमिन डेमो</button>
+ </nav>
+ <div id="home">
+  <div class="grid">
+   <button class="tile" onclick="showPage('courses')"><span>📚</span>मेरे कोर्स</button>
+   <button class="tile" onclick="showPage('notes')"><span>📄</span>PDF नोट्स</button>
+   <button class="tile" onclick="showPage('video')"><span>🎥</span>वीडियो क्लास</button>
+   <button class="tile" onclick="showPage('live')"><span>🔴</span>लाइव क्लास</button>
+   <button class="tile" onclick="showPage('timetable')"><span>📅</span>टाइम टेबल</button>
+   <button class="tile" onclick="showPage('notices')"><span>📢</span>छुट्टी एवं नोटिस</button>
+   <button class="tile" onclick="showPage('results')"><span>📝</span>टेस्ट एवं रिजल्ट</button>
+   <button class="tile" onclick="showPage('payment')"><span>💳</span>फीस / QR पेमेंट</button>
+   <button class="tile" onclick="showPage('social')"><span>📱</span>सोशल मीडिया</button>
+  </div>
+  <div class="notice">📌 <b>महत्वपूर्ण:</b> इस डेमो में जानकारी उदाहरण के तौर पर है। असली विद्यार्थियों के अकाउंट, ऑनलाइन लाइव प्रसारण, भुगतान सत्यापन और ऑनलाइन डेटा सेव करने के लिए सुरक्षित सर्वर/बैकएंड जोड़ना होगा।</div>
+  <div class="section"><h2>📍 कोचिंग का पता</h2><p>खप्पर वाली माता मंदिर के सामने, काच्छी मोहल्ला (ल्हास)</p><p>📞 7297985568 · 9509720517</p></div>
+ </div>
+ <div id="courses" class="section hidden"><h2>📚 कोर्स और मासिक फीस</h2>
+  <div class="course">नवोदय विद्यालय प्रवेश परीक्षा (JNVST) <span class="price">₹200/माह</span></div>
+  <div class="course">हिंदी / गणित — कक्षा 1 से 7 <span class="price">₹200/माह</span></div>
+  <div class="course">अंग्रेज़ी पढ़ना और बोलना <span class="price">₹300/माह</span></div>
+  <div class="course">गणित / अंग्रेज़ी — कक्षा 8, 9, 10 <span class="price">₹300/माह</span></div>
+ </div>
+ <div id="register" class="section hidden"><h2>🧑‍🎓 विद्यार्थी रजिस्ट्रेशन</h2>
+  <form id="regForm"><label>विद्यार्थी का नाम</label><input required name="name" placeholder="पूरा नाम">
+  <label>मोबाइल नंबर</label><input required name="phone" inputmode="numeric" pattern="[0-9]{10}" placeholder="10 अंकों का मोबाइल नंबर">
+  <label>कक्षा</label><select required name="class"><option value="">कक्षा चुनें</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
+  <label>कोर्स</label><select required name="course"><option value="">कोर्स चुनें</option><option>JNVST — ₹200/माह</option><option>हिंदी / गणित कक्षा 1–7 — ₹200/माह</option><option>अंग्रेज़ी पढ़ना-बोलना — ₹300/माह</option><option>गणित / अंग्रेज़ी कक्षा 8–10 — ₹300/माह</option></select>
+  <button type="submit">रजिस्ट्रेशन डेमो सबमिट करें</button></form><p id="regMsg" class="muted"></p><small>यह केवल डेमो है; अभी जानकारी किसी ऑनलाइन सर्वर पर सेव नहीं होती।</small>
+ </div>
+ <div id="notes" class="section hidden"><h2>📄 PDF नोट्स</h2><p>कक्षा और विषय चुनकर नोट्स देखें।</p><select><option>कक्षा चुनें</option><option>कक्षा 5 — JNVST</option><option>कक्षा 6</option><option>कक्षा 7</option><option>कक्षा 8</option><option>कक्षा 9</option><option>कक्षा 10</option></select><p class="notice">PDF सामग्री एडमिन द्वारा जोड़ने के बाद यहाँ दिखाई जाएगी। आपकी पसंद के अनुसार विद्यार्थी ऐप के अंदर पढ़ेंगे, डाउनलोड बटन नहीं होगा।</p></div>
+ <div id="video" class="section hidden"><h2>🎥 वीडियो क्लास</h2><p>रिकॉर्डेड वीडियो लेक्चर यहाँ दिखाई देंगे।</p><input placeholder="वीडियो लिंक (एडमिन द्वारा जोड़ा जाएगा)"><button onclick="alert('डेमो: असली वीडियो लाइब्रेरी अभी कनेक्ट नहीं है।')">वीडियो खोलें</button></div>
+ <div id="live" class="section hidden"><h2>🔴 लाइव क्लास</h2><p>यह डेमो आपके मोबाइल कैमरे का प्रीव्यू दिखा सकता है। इससे अपने-आप इंटरनेट पर लाइव प्रसारण शुरू नहीं होता।</p><video id="cameraPreview" autoplay muted playsinline></video><p><button onclick="startCamera()">कैमरा चालू करें</button> <button class="secondary" onclick="stopCamera()">कैमरा बंद करें</button></p><p class="muted">वास्तविक लाइव प्रसारण के लिए लाइव-स्ट्रीमिंग सर्वर/सेवा और सुरक्षित एडमिन नियंत्रण जोड़ना होगा।</p></div>
+ <div id="timetable" class="section hidden"><h2>📅 क्लास टाइम टेबल</h2><div class="course">सोमवार से शनिवार <span class="price">नियमित कक्षाएँ</span></div><div class="course">रविवार <span class="price">साप्ताहिक टेस्ट</span></div><p>कक्षा का सटीक समय एडमिन यहाँ अपडेट करेगा।</p></div>
+ <div id="notices" class="section hidden"><h2>📢 छुट्टी एवं नोटिस</h2><p class="notice">अभी कोई नया नोटिस नहीं है। छुट्टी या समय में बदलाव की सूचना यहाँ दिखाई जाएगी।</p></div>
+ <div id="results" class="section hidden"><h2>📝 टेस्ट एवं रिजल्ट</h2><p>टेस्ट की तारीख, अधिकतम अंक, प्राप्त अंक और परिणाम यहाँ जोड़े जा सकेंगे।</p></div>
+ <div id="payment" class="section hidden"><h2>💳 फीस जमा करें</h2><p>अपना UPI QR कोड मिलने पर यहाँ जोड़ा जाएगा।</p><div class="notice">अभी QR इमेज जोड़ी नहीं गई है। कृपया अपना QR कोड PNG/JPG इमेज के रूप में दें। भुगतान अपने बैंक/UPI ऐप में जाँचें; यह डेमो भुगतान की पुष्टि नहीं करता।</div><p><button onclick="alert('QR कोड जोड़ने के बाद विद्यार्थी इसे देख सकेंगे।')">QR कोड देखें</button></p></div>
+ <div id="social" class="section hidden"><h2>📱 सोशल मीडिया</h2><p><a class="btn" target="_blank" rel="noopener" href="https://instagram.com/parasvibes19">Paras Vibes Instagram</a></p><p><a class="btn" target="_blank" rel="noopener" href="https://www.instagram.com/paraseducationpoint">Paras Education Point Instagram</a></p></div>
+ <div id="admin" class="section hidden"><h2>🔐 एडमिन पैनल — डेमो</h2><p>एडमिन सुविधाओं का प्रारंभिक नमूना। अभी पासवर्ड सुरक्षा या सर्वर से कनेक्शन नहीं है।</p><label>नया नोटिस लिखें</label><textarea id="adminNotice" rows="3" placeholder="जैसे: कल सभी कक्षाएँ बंद रहेंगी।"></textarea><button onclick="publishNotice()">नोटिस प्रीव्यू करें</button><p id="noticePreview"></p><hr><label>PDF/फोटो/वीडियो फाइल चुनें (केवल इस डेमो में)</label><input type="file" multiple accept=".pdf,image/*,video/*"><small>अपलोड अभी केवल चयन दिखाता है; विद्यार्थियों को ऑनलाइन सामग्री देने के लिए बैकएंड जरूरी है।</small></div>
+</main>
+<footer>Paras Education Point · कक्षा 1 से 10 · JNVST तैयारी</footer>
+<script>
+let cameraStream=null;
+function showPage(id){document.querySelectorAll('main > div[id]').forEach(x=>x.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});}
+document.getElementById('regForm').addEventListener('submit',e=>{e.preventDefault();let d=new FormData(e.target);document.getElementById('regMsg').textContent=`डेमो रजिस्ट्रेशन तैयार: ${d.get('name')} · कक्षा ${d.get('class')}। अभी यह सर्वर पर सेव नहीं हुआ है।`;});
+async function startCamera(){try{cameraStream=await navigator.mediaDevices.getUserMedia({video:true,audio:true});document.getElementById('cameraPreview').srcObject=cameraStream;}catch(e){alert('कैमरा अनुमति नहीं मिली या यह ब्राउज़र सुरक्षित HTTPS कनेक्शन पर नहीं चल रहा।');}}
+function stopCamera(){if(cameraStream){cameraStream.getTracks().forEach(t=>t.stop());cameraStream=null;}document.getElementById('cameraPreview').srcObject=null;}
+function publishNotice(){let n=document.getElementById('adminNotice').value.trim();document.getElementById('noticePreview').textContent=n?('नोटिस प्रीव्यू: '+n):'पहले नोटिस लिखें।';}
+</script>
+</body></html>
